@@ -20,6 +20,8 @@ const bestPrice = document.getElementById('best-price');
 const totalAmount = document.getElementById('total-amount');
 // get main total price id
 const mainTotal = document.getElementById('main-total');
+// get cupon button id
+const cuponButton = document.getElementById('apply-cupon');
 
 // added function all buttons
 function updatePrice() {
@@ -32,52 +34,51 @@ function updatePrice() {
     totalAmount.innerText = totalPrice;
     mainTotal.innerText = totalPrice;
 }
-// create promo code function 
-function promoCode() {
+
+// addEvenListener added for memory button
+memory1.addEventListener('click', function () {
+    memoryCost.innerText = '0';
+    updatePrice();
+});
+memory2.addEventListener('click', function () {
+    memoryCost.innerText = '180';
+    updatePrice();
+})
+// addEvenListener added for storage button
+storage1.addEventListener('click', function () {
+    storageCost.innerText = '0';
+    updatePrice();
+})
+storage2.addEventListener('click', function () {
+    storageCost.innerText = '100';
+    updatePrice();
+})
+storage3.addEventListener('click', function () {
+    storageCost.innerText = '180';
+    updatePrice();
+})
+// addEvenListener added for delivery button
+freeDelivery.addEventListener('click', function () {
+    deliveryCost.innerText = '0';
+    updatePrice();
+})
+chargeDelivery.addEventListener('click', function () {
+    deliveryCost.innerText = '20';
+    updatePrice();
+})
+// get promo button and call the promo code function 
+cuponButton.addEventListener('click', function () {
     // get cupon field 
     const cuponField = document.getElementById('cupon-field');
     const allTotal = mainTotal.innerText;
     const discount = allTotal - ((allTotal * 20) / 100);
     if (cuponField.value == 'stevekaku') {
-        mainTotal.innerText = discount;
+        if (mainTotal.innerText = discount) {
+            cuponField.setAttribute('disabled', true);
+        }
     } else {
         alert('Wrong cupon code !!!');
     }
     // remove cuponField 
     cuponField.value = '';
-}
-// addEvenListener added for memory button
-memory1.addEventListener('click', function () {
-    memoryCost.innerText = '0';
-    updatePrice()
-});
-memory2.addEventListener('click', function () {
-    memoryCost.innerText = '180';
-    updatePrice()
-})
-// addEvenListener added for storage button
-storage1.addEventListener('click', function () {
-    storageCost.innerText = '0';
-    updatePrice()
-})
-storage2.addEventListener('click', function () {
-    storageCost.innerText = '100';
-    updatePrice()
-})
-storage3.addEventListener('click', function () {
-    storageCost.innerText = '180';
-    updatePrice()
-})
-// addEvenListener added for delivery button
-freeDelivery.addEventListener('click', function () {
-    deliveryCost.innerText = '0';
-    updatePrice()
-})
-chargeDelivery.addEventListener('click', function () {
-    deliveryCost.innerText = '20';
-    updatePrice()
-})
-// get promo button and call the promo code function 
-document.getElementById('apply-cupon').addEventListener('click', function () {
-    promoCode();
 })
