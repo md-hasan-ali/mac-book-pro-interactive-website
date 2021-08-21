@@ -1,116 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mac-book-pro</title>
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-</head>
-
-<body>
-    <main>
-        <!-- iMac Strat -->
-        <section>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>mac-book-pro</title>
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+   </head>
+   <body>
+      <main>
+         <!-- iMac Strat -->
+         <section>
             <div class="container mt-4 pt-4">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-md-4 mb-5">
-                        <img class="img-fluid" src="images/mac.png" alt="images">
-                    </div>
-                    <div class="col-md-6">
-                        <!-- iMac-title start -->
-                        <div class="main-content">
-                            <h1 class="fs-1">Customize your blue 24-inch iMac with apple M1 chip</h1>
-                            <p class="mb-5">Your iMac comes with 90 days of complimentary technical support and a
-                                one-year limited warranty. Purchase AppleCare+ for Mac to extend your coverage from your
-                                AppleCare+ purchase date and add up to two incidents of accidental damage coverage every
-                                12 months,</p>
+               <div class="row gx-5 justify-content-center">
+                  <div class="col-md-4 mb-5">
+                     <img class="img-fluid" src="images/mac.png" alt="images">
+                  </div>
+                  <div class="col-md-6">
+                     <!-- iMac-title start -->
+                     <div class="main-content">
+                        <h1 class="fs-1">Customize your blue 24-inch iMac with apple M1 chip</h1>
+                        <p class="mb-5">Your iMac comes with 90 days of complimentary technical support and a
+                           one-year limited warranty. Purchase AppleCare+ for Mac to extend your coverage from your
+                           AppleCare+ purchase date and add up to two incidents of accidental damage coverage every
+                           12 months,
+                        </p>
+                     </div>
+                     <!-- iMac-title end -->
+                     <!-- memory-area start -->
+                     <div class="mb-4">
+                        <h3>Memory</h3>
+                        <button id="memory1" type="button" class="btn btn-outline-secondary">8GB unified
+                        memory</button>
+                        <button id="memory2" type="button" class="btn btn-outline-secondary">16GB unified
+                        memory</button>
+                     </div>
+                     <!-- memory-area end -->
+                     <!-- Storage-area start -->
+                     <div class="mb-4">
+                        <h3>storage</h3>
+                        <button id="storage1" type="button" class="btn btn-outline-secondary">256 GB SSD
+                        storage</button>
+                        <button id="storage2" type="button" class="btn btn-outline-secondary">512GB SSD
+                        storage</button>
+                        <button id="storage3" type="button" class="btn btn-outline-secondary">1TB SSD
+                        storage</button>
+                     </div>
+                     <!-- Storage-area end -->
+                     <!-- delivery-option start -->
+                     <div class="mb-5">
+                        <h3>Choose your delivery options</h3>
+                        <button id="free-delivery" type="button" class="btn btn-outline-secondary">Friday,Aug25 free
+                        prime
+                        Delivery</button>
+                        <button id="charge-delivery" type="button" class="btn btn-outline-secondary">Friday,Aug21
+                        charge Delivery
+                        $20</button>
+                     </div>
+                     <!-- delivery-option end -->
+                     <!-- priceing table start -->
+                     <div class="pricing-table">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <table class="table fw-bold">
+                                 <tbody>
+                                    <tr>
+                                       <td>Best Price</td>
+                                       <td>$<span id="best-price">1299</span></td>
+                                    </tr>
+                                    <tr>
+                                       <td>Extra Memory Cost</td>
+                                       <td>$<span id="memory-cost">0</span></td>
+                                    </tr>
+                                    <tr>
+                                       <td>Extra Storage Cost</td>
+                                       <td>$<span id="storage-cost">0</span></td>
+                                    </tr>
+                                    <tr class="border-dark">
+                                       <td>Delivery Charge</td>
+                                       <td>$<span id="delivery-cost">0</span></td>
+                                    </tr>
+                                 </tbody>
+                                 <tfoot>
+                                    <td>Total</td>
+                                    <td>$<span id="total-amount">1299</span></td>
+                                 </tfoot>
+                              </table>
+                           </div>
                         </div>
-                        <!-- iMac-title end -->
-                        <!-- memory-area start -->
-                        <div class="mb-4">
-                            <h3>Memory</h3>
-                            <button id="memory1" type="button" class="btn btn-outline-secondary">8GB unified
-                                memory</button>
-                            <button id="memory2" type="button" class="btn btn-outline-secondary">16GB unified
-                                memory</button>
+                     </div>
+                     <!-- priceing table start -->
+                     <!-- promo code start -->
+                     <div class="copon-code mb-2 d-flex align-items-center ">
+                        <div>
+                           <span class="fs-5 d-block">add promo code!!!</span>
+                           <input id="cupon-field" type="text" style="width:250px"
+                              class="form-control d-inline me-1">
+                           <button id="apply-cupon" class="btn btn-danger">Apply</button>
                         </div>
-                        <!-- memory-area end -->
-                        <!-- Storage-area start -->
-                        <div class="mb-4">
-                            <h3>storage</h3>
-                            <button id="storage1" type="button" class="btn btn-outline-secondary">256 GB SSD
-                                storage</button>
-                            <button id="storage2" type="button" class="btn btn-outline-secondary">512GB SSD
-                                storage</button>
-                            <button id="storage3" type="button" class="btn btn-outline-secondary">1TB SSD
-                                storage</button>
-                        </div>
-                        <!-- Storage-area end -->
-                        <!-- delivery-option start -->
-                        <div class="mb-5">
-                            <h3>Choose your delivery options</h3>
-                            <button id="free-delivery" type="button" class="btn btn-outline-secondary">Friday,Aug25 free
-                                prime
-                                Delivery</button>
-                            <button id="charge-delivery" type="button" class="btn btn-outline-secondary">Friday,Aug21
-                                charge Delivery
-                                $20</button>
-                        </div>
-                        <!-- delivery-option end -->
-                        <!-- priceing table start -->
-                        <div class="pricing-table">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <table class="table fw-bold">
-                                        <tbody>
-                                            <tr>
-                                                <td>Best Price</td>
-                                                <td>$<span id="best-price">1299</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Extra Memory Cost</td>
-                                                <td>$<span id="memory-cost">0</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Extra Storage Cost</td>
-                                                <td>$<span id="storage-cost">0</span></td>
-                                            </tr>
-                                            <tr class="border-dark">
-                                                <td>Delivery Charge</td>
-                                                <td>$<span id="delivery-cost">0</span></td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <td>Total</td>
-                                            <td>$<span id="total-amount">1299</span></td>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- priceing table start -->
-                        <!-- promo code start -->
-                        <div class="copon-code mb-2 d-flex align-items-center ">     
-                            <div>
-                                <span class="fs-5 d-block">add promo code!!!</span>
-                                <input id="cupon-field" type="text" style="width:250px"
-                                    class="form-control d-inline me-1">
-                                <button id="apply-cupon" class="btn btn-danger">Apply</button>
-                            </div>
-                        </div>
-                        <!-- promo code end -->
-                    </div>
-                </div>
-                <hr class="w-75 mx-auto">
-                <h2 class="text-center mb-5">Total: $<span id="main-total">1299</span></h2>
+                     </div>
+                     <!-- promo code end -->
+                  </div>
+               </div>
+               <hr class="w-75 mx-auto">
+               <h2 class="text-center mb-5">Total: $<span id="main-total">1299</span></h2>
             </div>
-        </section>
-        <!-- iMac End -->
-    </main>
-    <script src="js/imac.js"></script>
-</body>
-
+         </section>
+         <!-- iMac End -->
+      </main>
+      <script src="js/imac.js"></script>
+   </body>
 </html>
