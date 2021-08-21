@@ -23,6 +23,7 @@ const totalAmount = document.getElementById('total-amount');
 // get main total price id
 const mainTotal = document.getElementById('main-total');
 
+// added function all buttons
 function updatePrice() {
     const memoryPrice = parseFloat(memoryCost.innerText);
     const previousTotalPrice = parseFloat(bestPrice.innerText);
@@ -40,7 +41,7 @@ memory1.addEventListener('click', function () {
     updatePrice()
 });
 memory2.addEventListener('click', function () {
-    memoryCost.innerText = '20';
+    memoryCost.innerText = '180';
     updatePrice()
 })
 // addEvenListener added for storage button
@@ -57,11 +58,25 @@ storage3.addEventListener('click', function () {
     updatePrice()
 })
 // addEvenListener added for delivery button
-freeDelivery.addEventListener('click',function() {
+freeDelivery.addEventListener('click', function () {
     deliveryCost.innerText = '0';
     updatePrice()
 })
-chargeDelivery.addEventListener('click',function() {
+chargeDelivery.addEventListener('click', function () {
     deliveryCost.innerText = '20';
     updatePrice()
+})
+// added promo code 
+document.getElementById('apply-cupon').addEventListener('click', function () {
+    // get cupon field 
+    const cuponField = document.getElementById('cupon-field');
+    const allTotal = mainTotal.innerText;
+    const discount = allTotal-((allTotal * 20)/100);
+    if (cuponField.value == 'stevekaku') {
+        mainTotal.innerText = discount;
+    } else {
+        alert('wrong cupon code!!')
+    }
+    // remove cuponField 
+    cuponField.value = '';
 })
